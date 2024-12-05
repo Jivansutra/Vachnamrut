@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vachanamrut - Jay Swaminarayan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #fff7e6;
+            color: #8b4513;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .top-border {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, #ff9933, #ff8000, #ff9933);
+            z-index: 1000;
+        }
+
+        .page-wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(139, 69, 19, 0.1);
+            border: 2px solid #ff9933;
+            position: relative;
+            margin: 20px auto;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 30px;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ff9933;
+            box-shadow: 0 0 20px rgba(255, 153, 51, 0.3);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+            color: #ff8000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .jay-swaminarayan {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            color: #8b4513;
+            font-weight: bold;
+        }
+
+        .sanskrit-text {
+            font-family: 'Arial', sans-serif;
+            color: #8b4513;
+            font-size: 1.5rem;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        .description {
+            margin: 30px auto;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            color: #5c2d0c;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .decoration {
+            position: absolute;
+            font-size: 24px;
+            color: #ff9933;
+            opacity: 0.3;
+        }
+
+        .decoration:nth-child(1) { top: 20px; left: 20px; }
+        .decoration:nth-child(2) { top: 20px; right: 20px; }
+        .decoration:nth-child(3) { bottom: 20px; left: 20px; }
+        .decoration:nth-child(4) { bottom: 20px; right: 20px; }
+
+        .ornament {
+            width: 100%;
+            height: 30px;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q25 0, 50 10 T 100 10' stroke='%23ff9933' fill='none' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+            margin: 20px 0;
+            opacity: 0.5;
+        }
+
+        .content-section {
+            margin: 40px 0;
+            padding: 20px;
+        }
+
+        .quote-section {
+            background: rgba(255, 153, 51, 0.1);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #8b4513;
+            line-height: 1.8;
+        }
+
+        .reference {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #ff8000;
+        }
+
+        .coming-soon {
+            font-size: 1.8rem;
+            color: #ff8000;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .jay-swaminarayan {
+                font-size: 1.8rem;
+            }
+            
+            .sanskrit-text {
+                font-size: 1.2rem;
+            }
+            
+            .logo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .description {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-border"></div>
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="decoration">🕉️</div>
+            <div class="decoration">🕉️</div>
+            <div class="decoration">🕉️</div>
+            <div class="decoration">🕉️</div>
+            
+            <div class="logo">
+                <img src="assets/12.jpg" alt="Bhagwan Swaminarayan">
+            </div>
+
+            <div class="ornament"></div>
+            
+            <div class="jay-swaminarayan">
+                જય સ્વામિનારાયણ
+            </div>
+
+            <h1>Vachanamrut</h1>
+
+            <div class="sanskrit-text">
+                वचनामृतं भगवत्स्वामिनारायणविरचितम्
+            </div>
+
+            <div class="content-section">
+                <p class="description">
+                    The Vachanamrut is the essence of all scriptures. It contains the precise words spoken by 
+                    Bhagwan Swaminarayan, capturing His divine knowledge and teachings for eternal spiritual guidance.
+                </p>
+            </div>
+
+            <div class="quote-section">
+                <p class="quote">
+                    "One who has profound love for God and His Sant considers himself to be brahmarup and 
+                    offers upāsanā to Purushottam while maintaining a master-servant relationship with Him."
+                </p>
+                <p class="reference">
+                    - Vachanamrut Gadhada Pratham 54
+                </p>
+            </div>
+
+            <div class="quote-section">
+                <p class="quote">
+                    "The jiva attains ultimate liberation only when it identifies itself with the brahmarup form 
+                    and offers bhakti to Purushottam."
+                </p>
+                <p class="reference">
+                    - Vachanamrut Gadhada Madhya 13
+                </p>
+            </div>
+
+            <div class="coming-soon">
+                Website Coming Soon...
+            </div>
+
+            <div class="ornament"></div>
+        </div>
+    </div>
+</body>
+</html>
