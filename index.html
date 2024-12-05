@@ -151,6 +151,99 @@
             font-weight: bold;
         }
 
+        /* Updated Contact Form Styles */
+        .contact-form {
+            max-width: 800px;
+            margin: 40px auto;
+            background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
+            overflow: hidden;
+        }
+
+        .form-header {
+            background: linear-gradient(90deg, #ff9933, #ff8000);
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .form-header h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-content {
+            padding: 40px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #ffd1b3;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #5c2d0c;
+            background: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus,
+        .input-group textarea:focus {
+            border-color: #ff9933;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.2);
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #8b4513;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .input-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(90deg, #ff9933, #ff8000);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+            margin: 0 auto;
+            font-weight: bold;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 153, 51, 0.3);
+        }
+
+        .submit-button:active {
+            transform: translateY(0);
+        }
+
+        .contact-divider {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #ff9933, transparent);
+            margin: 40px 0;
+            opacity: 0.3;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 20px 10px;
@@ -177,6 +270,18 @@
                 font-size: 1rem;
                 padding: 0 15px;
             }
+
+            .contact-form {
+                margin: 20px;
+            }
+
+            .form-content {
+                padding: 20px;
+            }
+
+            .form-header h2 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -184,10 +289,10 @@
     <div class="top-border"></div>
     <div class="page-wrapper">
         <div class="container">
-            <div class="decoration">🕉️</div>
-            <div class="decoration">🕉️</div>
-            <div class="decoration">🕉️</div>
-            <div class="decoration">🕉️</div>
+            <div class="decoration">🕉</div>
+            <div class="decoration">🕉</div>
+            <div class="decoration">🕉</div>
+            <div class="decoration">🕉</div>
             
             <div class="logo">
                 <img src="assets/12.jpg" alt="Bhagwan Swaminarayan">
@@ -234,6 +339,45 @@
 
             <div class="coming-soon">
                 Website Coming Soon...
+            </div>
+
+            <div class="ornament"></div>
+
+            <div class="contact-form">
+                <div class="form-header">
+                    <h2>Get in Touch</h2>
+                    <p>Send us your questions and feedback</p>
+                </div>
+                
+                <div class="form-content">
+                    <form action="https://formsubmit.co/7c78b42bc2ece0ac596069c9a425bb62" method="POST">
+                        <!-- Honeypot -->
+                        <input type="text" name="_honey" style="display: none;">
+                        
+                        <!-- Disable Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <!-- Success Page -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+                        
+                        <div class="input-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="message">Your Message</label>
+                            <textarea name="message" id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
             </div>
 
             <div class="ornament"></div>
