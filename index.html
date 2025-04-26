@@ -250,11 +250,18 @@
             width: 100%;
             font-weight: bold;
             transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
         }
 
         .submit-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 153, 51, 0.3);
+        }
+
+        .g-recaptcha {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
         }
 
         @keyframes fadeIn {
@@ -344,7 +351,7 @@
                 <button class="popup-close" onclick="closeContactPopup()">&times;</button>
             </div>
             <div class="popup-body">
-                <form action="https://formsubmit.co/7c78b42bc2ece0ac596069c9a425bb62" method="POST">
+                <form id="contactForm" action="https://formsubmit.co/7c78b42bc2ece0ac596069c9a425bb62" method="POST" onsubmit="return validateForm()">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://www.vachnamrut.com/thanks.html">
                     
@@ -363,12 +370,18 @@
                         <textarea name="message" id="message" required></textarea>
                     </div>
                     
+                    <!-- Google reCAPTCHA -->
+                    <div class="g-recaptcha" data-sitekey="6LfrTCUrAAAAAIVqV3cMGpIxALPhWnBAdd4eb9PM"></div>
+                    
                     <button type="submit" class="submit-button">Send Message</button>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Google reCAPTCHA API -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
     <script>
         function openContactPopup() {
             document.getElementById('contactPopup').classList.add('show');
@@ -391,6 +404,17 @@
                 closeContactPopup();
             }
         });
+        
+        function validateForm() {
+            // Check if reCAPTCHA is completed
+            var response = grecaptcha.getResponse();
+            if (response.length === 0) {
+                // reCAPTCHA not verified
+                alert("Please verify that you are not a robot. ");
+                return false;
+            }
+            return true;
+        }
     </script>
 </body>
 </html>
